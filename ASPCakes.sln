@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33020.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPCakes", "ASPCakes\ASPCakes.csproj", "{BA9C6AFE-0C2E-4C1B-AB3B-3231C382F20E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA9C6AFE-0C2E-4C1B-AB3B-3231C382F20E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA9C6AFE-0C2E-4C1B-AB3B-3231C382F20E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA9C6AFE-0C2E-4C1B-AB3B-3231C382F20E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA9C6AFE-0C2E-4C1B-AB3B-3231C382F20E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8072DBC9-EC68-45DF-AEDD-9C0B7E27CB78}
+	EndGlobalSection
+EndGlobal

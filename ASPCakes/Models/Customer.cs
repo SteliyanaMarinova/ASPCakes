@@ -1,12 +1,11 @@
-﻿namespace ASPCakes.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace ASPCakes.Models
 {
-    public class Customer
+    public class Customer :IdentityUser
     {
-        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
         public string Address { get; set; }
         public ICollection <Order> Orders { get; set; }
     }

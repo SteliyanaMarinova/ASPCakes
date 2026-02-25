@@ -1,4 +1,5 @@
-﻿using ASPCakes.Data;
+﻿using ASPCakes;
+using ASPCakes.Data;
 using ASPCakes.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -58,6 +59,7 @@ namespace ASPShopBag.Services
                     FirstName = "Steliyana",
                     LastName = "Marinova",
                     PhoneNumber = "0899999999",
+                    Address = "Sokolicaaa",
                     EmailConfirmed = true,
                     PhoneNumberConfirmed = true
                 };

@@ -4,6 +4,7 @@ using ASPCakes.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASPCakes.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260223071352_shesta")]
+    partial class shesta
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -167,7 +170,7 @@ namespace ASPCakes.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CategoriesId")
+                    b.Property<int>("CategodiesId")
                         .HasColumnType("int");
 
                     b.Property<string>("CategoryId")
@@ -200,7 +203,7 @@ namespace ASPCakes.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoriesId");
+                    b.HasIndex("CategodiesId");
 
                     b.ToTable("Products");
                 });
@@ -361,11 +364,13 @@ namespace ASPCakes.Data.Migrations
 
             modelBuilder.Entity("ASPCakes.Models.Product", b =>
                 {
-                    b.HasOne("ASPCakes.Models.Category", "Categories")
+                    b.HasOne("ASPCakes.Models.Category", "Categodies")
                         .WithMany("Products")
-                        .HasForeignKey("CategoriesId");
+                        .HasForeignKey("CategodiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Categories");
+                    b.Navigation("Categodies");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
